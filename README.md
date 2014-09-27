@@ -1,6 +1,7 @@
 #Counting Words
 
 __Skill Level:__ Intermediate
+__Time Limit:__ 15-20 minutes
 
 Variations of this challenge are pretty common in code interviews and phone screens for software engineering. The task may differ but the fundamentals are usually pretty much the same - Given a file, read it, and parse the data.
 
@@ -20,10 +21,16 @@ Given: "The cat is tall. The cat is much bigger than the mouse."
 Then:
 ``
 3 - the
+
 2 - cat
+
 1 - is
+
 1 - mouse
+
 1 - bigger
+
 1 - than
+
 1 - much
 ``
