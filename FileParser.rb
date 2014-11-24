@@ -5,14 +5,14 @@ class FileParser
 		@file = file
 		@wordCounter = Hash.new(0)
 		parse_file
-		# print_histogram
 	end
 
 	def parse_file	
 		File.foreach(file) do |line| 
 			if line.strip != ""
 				line.scan(/\w+/).each do |word| 
-					wordCounter[word] += 1 
+					next if /^_/.match("#{word}") #kept having an underscore
+					wordCounter[word.intern] += 1 #add convert to symbols
 				end
 			end
 		end
