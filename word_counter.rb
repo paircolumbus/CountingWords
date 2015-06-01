@@ -38,6 +38,6 @@ class WordCounter
 
 	def sanitize_me!(word)
 		word.downcase!
-	  word.gsub!(/(\W|\d|_)/, '')
+	  	word.gsub!(/(\W|\d|_)/, '')
 	end 
 end 
