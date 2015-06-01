@@ -41,6 +41,3 @@ class WordCounter
 	  word.gsub!(/(\W|\d|_)/, '')
 	end 
 end 
-
-counter = WordCounter.new('speech.txt')
-counter.run!

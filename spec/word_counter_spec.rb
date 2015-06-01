@@ -30,5 +30,5 @@ let (:counter) { WordCounter.new('test.txt')}
   		counter.order_frequencies
   		expect(counter.word_counts).to eq({"wow" => 5, "tuna" => 3, "cats" => 1, "cinnamon" => 1})
   	end
-  end  
+  end
 end 
