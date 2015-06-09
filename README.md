@@ -22,9 +22,10 @@ Then:
 ```
 3 - the
 2 - cat
-1 - is
-1 - mouse
+2 - is
+1 - much
+1 - tall
 1 - bigger
 1 - than
-1 - much
+1 - mouse
 ```
