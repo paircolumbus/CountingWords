@@ -1,8 +1,9 @@
 class CountWords
-  attr_reader :counts
+  attr_reader :counts, :total_word_count
 
   def initialize
     clear_counts
+    @total_word_count = 0
   end
 
   def clear_counts
@@ -14,6 +15,9 @@ class CountWords
       w.gsub(/^-+/, '').gsub(/[-']+$/, '').downcase
     end
 
-    words.each { |w| @counts[w] += 1 }
+    words.each do |w|
+      @counts[w] += 1
+      @total_word_count += 1
+    end
   end
 end
