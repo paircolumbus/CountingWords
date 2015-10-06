@@ -1,23 +1,18 @@
 class CountWords
-  attr_reader :counts, :total_word_count
+  attr_reader :counts
 
   def initialize
     clear_counts
-    @total_word_count = 0
   end
 
   def clear_counts
-    @counts = Hash.new { |hash,key| hash[key] = 0 }
+    @counts = Hash.new(0)
   end
 
   def count_words(input_string)
-    words = input_string.split(/[^-a-zA-Z']+/).map do |w|
-      w.gsub(/^-+/, '').gsub(/[-']+$/, '').downcase
-    end
-
+    words = input_string.scan(/'?[a-zA-Z]+(?:[-'][a-zA-Z]+)*/).map(&:downcase)
     words.each do |w|
       @counts[w] += 1
-      @total_word_count += 1
     end
   end
 end

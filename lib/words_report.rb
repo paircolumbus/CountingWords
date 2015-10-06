@@ -20,9 +20,6 @@ class WordsReport
   private
 
   def words_by_frequency
-    @words = @counts.keys.sort do |a,b|
-      first = @counts[b] <=> @counts[a]
-      first == 0 ? a <=> b : first
-    end
+    @words = @counts.keys.sort { |a,b| [@counts[b], a] <=> [@counts[a], b] }
   end
 end

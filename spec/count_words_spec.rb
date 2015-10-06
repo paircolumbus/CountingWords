@@ -68,7 +68,7 @@ describe 'handle contractions' do
   end
 end
 
-describe 'handle compound wods' do
+describe 'handle compound words' do
   let(:counter) { CountWords.new }
 
   it 'counters have correct values' do
