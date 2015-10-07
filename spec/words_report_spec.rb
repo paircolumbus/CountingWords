@@ -26,6 +26,9 @@ describe WordsReport do
     it '#words' do
       expect(report).to respond_to(:words)
     end
+    it '#word_table' do
+      expect(report).to respond_to(:word_table)
+    end
     it '#popular_words' do
       expect(report).to respond_to(:popular_words)
     end

@@ -4,8 +4,8 @@ require 'count_words'
 describe 'initializing counter' do
   let(:counter) { CountWords.new }
 
-  expected = {}
   it 'counters start empty' do
+    expected = {}
     expect(counter.counts).to eq expected
   end
 end
